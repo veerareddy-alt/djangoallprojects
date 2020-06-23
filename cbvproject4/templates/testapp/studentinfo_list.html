@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+{%extends 'testapp/base.html'%}
+{%block body_block%}
+<h1>Student Information</h1><hr>
+{%for i in studentinfo_list%}
+<h2><a href="/detail/{{i.id}}">{{i.name}}</a></h2>
+{%endfor%}
+<a href="/create" class="btn btn-large btn-primary">Insert Student</a>
+
+{%endblock%}

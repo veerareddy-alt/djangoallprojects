@@ -1,0 +1,8 @@
+<!DOCTYPE html>
+{%extends 'testapp/base.html'%}
+{%block body_block%}
+<h1>Book Information</h1>
+{%for i in list_of_book%}
+  <h2><a href="/{{i.id}}">{{i.title}}</a></h2>
+  {%endfor%}
+{%endblock%}

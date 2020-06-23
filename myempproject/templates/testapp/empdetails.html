@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{%extends 'testapp/base.html'%}
+{%block body_block%}
+<h1>Employee Details is </h1><hr>
+{%if emp_list%}
+  <table>
+    <thead>
+      <th>Employee_ID</th>
+      <th>Employee_Name</th>
+      <th>Employee_Salary</th>
+    </thead>
+    {%for i in emp_list%}
+      <tr>
+        <th>{{i.eid}}</th>
+        <th>{{i.ename|title}}</th>
+        <th>{{i.esal}}</th>
+      </tr>
+    {%endfor%}
+  </table>
+  {%else%}
+    <p>No Data</p>
+{%endif%}
+{%endblock%}

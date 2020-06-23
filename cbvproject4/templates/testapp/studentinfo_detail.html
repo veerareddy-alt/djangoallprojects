@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+{%extends 'testapp/base.html'%}
+{%block body_block%}
+<h1>Student{{studentinfo.name}} Detail Information</h1><hr>
+<h2>Student RollNo:{{studentinfo.rollno}}</h2>
+<h2>Student Address:{{studentinfo.addr}}</h2><br>
+<a href="/" class="btn btn-large btn-primary">Back</a>
+<a href="/update/{{studentinfo.id}}" class="btn btn-large btn-warning">Update Student Info</a>
+<a href="/delete/{{studentinfo.id}}" class="btn btn-large btn-danger">Delete Student Info</a>
+{%endblock%}

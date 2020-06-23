@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    {%for i in filter_list%}
+    <ul>
+      <li>{{i.name|title}}</li>
+      <li>{{i.subject|title}}</li>
+      <li>{{i.dept|title}}</li>
+      <li>{{i.title}}</li>
+    </ul><hr>
+
+    {%endfor%}
+
+  </body>
+</html>

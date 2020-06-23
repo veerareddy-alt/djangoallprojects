@@ -1,0 +1,13 @@
+body{
+  background: red;
+  color: white;
+}
+h1{
+  font-size: 20px;
+  align-items: center;
+}
+a{
+  background: green;
+  color: yellow;
+  border: 2px solid black;
+}

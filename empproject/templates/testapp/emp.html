@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" href="{%static 'css/emp.css'%}">
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div class="container" align='center'>
+      <h1>EMPLOYEE DETAILS</h1>
+      {%if emp_list%}
+        <table>
+          <thead>
+            <th>EMPLOYEE NO</th>
+            <th>EMPLOYEE NAME</th>
+            <th>EMPLOYEE SALARY</th>
+            <th>EMPLOYEE ADDRESS</th>
+          </thead>
+          {%for i in emp_list%}
+            <tr>
+              <td>{{i.eno}}</td>
+              <td>{{i.ename}}</td>
+              <td>{{i.esal}}</td>
+              <td>{{i.eaddr}}</td>
+            </tr>
+          {%endfor%}
+        </table>
+        {%else%}
+          <p>NO RECORD IN DATABASE</p>
+      {%endif%}
+    </div>
+
+  </body>
+</html>

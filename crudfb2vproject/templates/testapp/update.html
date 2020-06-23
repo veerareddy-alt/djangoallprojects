@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+{%extends 'testapp/base.html'%}
+{%block body_block%}
+<h1>Student update information deskboard</h1>
+<form  method="post">
+
+  {%csrf_token%}
+  StudentRollno:<input type="text" name="srollno" value="{{s.srollno}}"><br>
+  StudentName:<input type="text" name="sname" value="{{s.sname}}"><br>
+  StudentDept:<input type="text" name="sdept" value="{{s.sdept}}"><br>
+  <input type="submit" class="btn btn-primary btn-large" value="Update Info">
+
+</form>
+
+
+{%endblock%}

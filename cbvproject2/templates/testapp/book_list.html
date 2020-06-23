@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+{%extends 'testapp/base.html'%}
+{%block body_block%}
+<h1>Book Information</h1>
+{%for i in book_list%}
+  <ul>
+    <li>BookTitle:{{i.title}}</li>
+    <li>BookAuthor:{{i.author}}</li>
+    <li>BookPages:{{i.pages}}</li>
+    <li>BookPrice:{{i.price}}</li>
+  </ul>
+  {%endfor%}
+{%endblock%}

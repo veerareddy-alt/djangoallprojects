@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{%extends 'testapp/base.html'%}
+{%block body_block%}
+<h1>Employee info deshboard</h1>
+<table border="2">
+  <thead>
+    <th>Employee No</th>
+    <th>Employee Name</th>
+    <th>Employee Salary</th>
+    <th>Employee Address</th>
+    <th>Action</th>
+  </thead>
+  {%for i in employees%}
+    <tr>
+      <td>{{i.eno}}</td>
+      <td>{{i.ename}}</td>
+      <td>{{i.esal}}</td>
+      <td>{{i.eadd}}</td>
+      <td><a href="/update/{{i.id}}">Update</a> <a href="/delete/{{i.id}}">Delete</a></td>
+
+    </tr>
+  {%endfor%}
+</table>
+<br><br>
+<a href="/create" class="btn btn-success btn-large">Insert Record</a>
+{%endblock%}

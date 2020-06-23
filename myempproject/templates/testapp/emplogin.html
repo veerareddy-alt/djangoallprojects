@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+{%extends 'testapp/base.html'%}
+{%block body_block%}
+<h1>WELCOME TO EMPLOYEE LOGIN PAGE PLEASE ENTER THE FOLLOWING DETAILS</h1><hr>
+<form  method="post">
+  {{form.as_p}}
+  {%csrf_token%}
+  <input type="submit" class="btn btn-primary btn-large" value="Submit Details">
+  <br><br>
+  <a class="btn btn-primary btn-large" href="/display" role="button">Display Employees</a>
+
+</form>
+{%endblock%}

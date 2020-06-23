@@ -1,0 +1,20 @@
+body{
+  background: red;
+  color:black;
+}
+.container{
+  font-size: 30px;
+
+}
+tr{
+  border: 20px,solid,blue;
+
+}
+td{
+  border: 20px,solid,blue;
+
+}
+th{
+  border: 20px,solid,blue;
+
+}

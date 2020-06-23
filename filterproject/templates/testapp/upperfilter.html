@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    {%load cust_filter%}
+    {%for i in filter_list%}
+    <ul>
+      <li>{{i.name|t_3}}</li>
+      <li>{{i.subject|upper}}</li>
+      <li>{{i.dept|upper}}</li>
+      <li>{{i.date}}</li>
+    </ul><hr>
+
+    {%endfor%}
+
+  </body>
+</html>

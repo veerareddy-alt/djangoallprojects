@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en" dir="ltr">
+  <head>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <link rel="stylesheet" href="{%static 'css/moviedemo.css'%}">
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div class="container" align='center'>
+      <h1>MOVIE LISTS</h1>
+      {%if movie_list%}
+        <table>
+          <thead>
+            <th>RELASEDATE</th>
+            <th>MOVIENAME</th>
+            <th>ACTOR</th>
+            <th>ACTERSS</th>
+            <th>RATING</th>
+          </thead>
+          {%for i in movie_list%}
+            <tr>
+              <td>{{i.rdate}}</td>
+              <td>{{i.moviename}}</td>
+              <td>{{i.actor}}</td>
+              <td>{{i.actress}}</td>
+              <td>{{i.rating}}</td>
+
+            </tr>
+          {%endfor%}
+        </table>
+        {%else%}
+          <p>NO INFORMATION</p>
+      {%endif%}
+    </div>
+
+
+
+  </body>
+</html>
